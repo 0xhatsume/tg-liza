@@ -3,6 +3,7 @@
     "scripts": {
         "preinstall": "npx only-allow pnpm",
         "build": "turbo run build",
+        "vercel-build": "ncc build src/index.ts -o dist -m",
         "build-docker": "turbo run build",
         "cleanstart": "if [ -f agent/data/db.sqlite ]; then rm agent/data/db.sqlite; fi && pnpm --filter \"@elizaos/agent\" start --isRoot",
         "cleanstart:debug": "if [ -f agent/data/db.sqlite ]; then rm agent/data/db.sqlite; fi && cross-env NODE_ENV=development VERBOSE=true DEBUG=eliza:* pnpm --filter \"@elizaos/agent\" start --isRoot",
@@ -58,6 +59,9 @@
         "node": "23.3.0"
     },
     "dependencies": {
+        "@vercel/node": "^3.2.24",
+        "dotenv-cli": "^7.4.2",
+        "telegraf": "^4.16.3",
         "@0glabs/0g-ts-sdk": "0.2.1",
         "@coinbase/coinbase-sdk": "0.10.0",
         "@deepgram/sdk": "^3.9.0",

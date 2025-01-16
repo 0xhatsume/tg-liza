@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "public": true,
+  "buildCommand": "pnpm build",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "api/index.ts"
+    }
+  ],
+  "redirects": [{ "source": "/", "destination": "/api", "permanent": false }]
+}
