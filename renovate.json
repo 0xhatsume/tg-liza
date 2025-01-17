@@ -48,7 +48,6 @@
             "groupName": "Audio processing",
             "matchPackagePatterns": [
                 "^wav",
-                "^@discordjs/opus",
                 "^fluent-ffmpeg",
                 "^ffmpeg",
                 "^@types/wav"
