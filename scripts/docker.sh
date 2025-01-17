@@ -36,7 +36,7 @@ case "$1" in
             "adapter-supabase"
             "client-auto"
             "client-direct"
-            "client-discord"
+            #"client-discord"
             "client-farcaster"
             "client-telegram"
             "client-twitter"
